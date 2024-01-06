@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"hash/fnv"
 )
 
@@ -47,14 +46,4 @@ func (h *HashTable) Get(key string) (string, bool) {
 		}
 	}
 	return "", false
-}
-
-func main() {
-	ht := NewHashTable(10)
-	ht.Set("key1", "value1")
-	ht.Set("key2", "value2")
-
-	if value, ok := ht.Get("key1"); ok {
-		fmt.Println("key1:", value)
-	}
 }
