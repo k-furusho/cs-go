@@ -1,19 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+// 動的配列
+// 配列のサイズが動的に変更できるデータ構造で、連続したメモリ領域に要素を格納する。
+// 動的配列はランダムアクセスが可能だが、サイズ変更にはコストがかかる場合がある。
 
-// 動的配列（スライス）の例
-func main() {
-	// 空のスライスを作成
-	dynamicArray := make([]int, 0)
-
-	// 要素を追加
-	dynamicArray = append(dynamicArray, 1)
-	dynamicArray = append(dynamicArray, 2)
-	dynamicArray = append(dynamicArray, 3)
-
-	// スライスの内容を表示
-	fmt.Println(dynamicArray)
+// スライスに要素を追加する関数
+// この関数は既存のスライスと追加する要素を受け取り、新しい要素が追加されたスライスを返す。
+func appendToSlice(slice []int, elements ...int) []int {
+	return append(slice, elements...)
 }
